@@ -18,7 +18,21 @@ public class Main {
 
         Pessoa pessoa = new Pessoa(nome, altura, peso);
 
-        System.out.println(pessoa.calculoImc());
+        System.out.printf("\n%s o seu IMC é %.2f e a sua classificaçã é ", pessoa.nome, pessoa.calculoImc());
+
+        if (pessoa.calculoImc() < 18.5) {
+            System.out.print("Magreza");
+        } else if (pessoa.calculoImc() >= 18.5 && pessoa.calculoImc() <= 24.9) {
+            System.out.print("Normal");
+        } else if (pessoa.calculoImc() >= 25 && pessoa.calculoImc() <= 29.9) {
+            System.out.print("Sobrepeso");
+        } else if (pessoa.calculoImc() >= 30 && pessoa.calculoImc() <= 34.9) {
+            System.out.print("Obesidade grau I");
+        } else if (pessoa.calculoImc() >= 35 && pessoa.calculoImc() <= 39.9) {
+            System.out.print("Obesidade grau II");
+        } else {
+            System.out.print("Obesidade grau III");
+        }
 
         sc.close();
     }
