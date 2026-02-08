@@ -18,6 +18,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Aluno[] vetorAlunos = new Aluno[5];
+        double vetorNotas[] = new double[5];
+
         int status, quantAtivos = 0, quantInativos = 0;
 
         for (int i = 0; i < vetorAlunos.length; i++) {
@@ -49,19 +51,28 @@ public class Main {
             System.out.println("------------------------------------------------");
             System.out.println("-- DIGITE AS NOTAS DO ALUNO " + (i + 1) + " --");
             System.out.print("Nota 01: ");
-            vetorAlunos[i].nota1 = sc.nextDouble();
+            double nota1 = sc.nextDouble();
             System.out.print("Nota 02: ");
-            vetorAlunos[i].nota2 = sc.nextDouble();
+            double nota2 = sc.nextDouble();
             System.out.print("Nota 03: ");
-            vetorAlunos[i].nota3 = sc.nextDouble();
+            double nota3 = sc.nextDouble();
             System.out.print("Nota 04: ");
-            vetorAlunos[i].nota4 = sc.nextDouble();
+            double nota4 = sc.nextDouble();
+
+            vetorNotas[i] = vetorAlunos[i].mediaAluno(nota1, nota2, nota3, nota4);
 
             if (status == 1) {
-                quantAtivos = quantAtivostivos + 1;
+                quantAtivos = quantAtivos + 1;
             } else {
                 quantInativos = quantInativos + 1;
             }
+        }
+
+        for (int i = 0; i < vetorAlunos.length; i++) {
+            System.out.println("------------------------------------------------");
+            System.out.println("-- NOTAS DO ALUNO " + (i + 1) + " --");
+
+            System.out.printf("%s com média: %.2f\n", vetorAlunos[i].nome);
         }
 
         sc.close();
