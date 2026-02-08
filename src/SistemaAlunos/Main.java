@@ -68,11 +68,17 @@ public class Main {
             }
         }
 
+
+        System.out.println("------------------------------------------------");
+        System.out.println("ALUNOS ATIVOS: " + quantAtivos);
+        System.out.println("ALUNOS INATIVOS: " + quantInativos);
+
+
         for (int i = 0; i < vetorAlunos.length; i++) {
             System.out.println("------------------------------------------------");
             System.out.println("-- NOTAS DO ALUNO " + (i + 1) + " --");
 
-            System.out.printf("%s com média: %.2f\n", vetorAlunos[i].nome);
+            System.out.printf("%s com média: %.2f\n", vetorAlunos[i].nome, vetorNotas[i]);
         }
 
         sc.close();
