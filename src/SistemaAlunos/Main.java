@@ -23,23 +23,23 @@ public class Main {
 
             System.out.println("-- DIGITE OS DADOS DO ALUNO " + (i + 1) + " --");
 
-            vetorAlunos[i] = new Aluno(); // cria o objeto
-
             System.out.print("Matrícula: ");
-            vetorAlunos[i].matricula = sc.nextInt();
+            int matricula = sc.nextInt();
             sc.nextLine();
 
             System.out.print("Nome: ");
-            vetorAlunos[i].nome = sc.nextLine();
+            String nome = sc.nextLine();
 
             System.out.print("Sexo (M/F): ");
-            vetorAlunos[i].sexo = sc.next().charAt(0);
+            char sexo = sc.next().charAt(0);
 
             System.out.print("Mês de Nascimento: ");
-            vetorAlunos[i].mesNascimento = sc.nextInt();
+            int mes = sc.nextInt();
 
             System.out.print("Ano de Nascimento: ");
-            vetorAlunos[i].anoNascimento = sc.nextInt();
+            int ano = sc.nextInt();
+
+            vetorAlunos[i] = new Aluno(matricula, nome, sexo, mes, ano);
         }
 
         sc.close();
