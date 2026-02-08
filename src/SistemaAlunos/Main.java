@@ -17,29 +17,32 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        String vetorAlunos[] = new String[5];
+        Aluno[] vetorAlunos = new Aluno[5];
 
         for (int i = 0; i < vetorAlunos.length; i++) {
 
+            System.out.println("-- DIGITE OS DADOS DO ALUNO " + (i + 1) + " --");
 
-            System.out.println("-- DIGITE OS DADOS DO ALUNO " + i + 1 + " --");
+            vetorAlunos[i] = new Aluno(); // cria o objeto
+
             System.out.print("Matrícula: ");
-            int matricula = sc.nextInt();
+            vetorAlunos[i].matricula = sc.nextInt();
+            sc.nextLine();
+
             System.out.print("Nome: ");
-            String nome = sc.nextLine();
+            vetorAlunos[i].nome = sc.nextLine();
+
             System.out.print("Sexo (M/F): ");
-            char sexo = sc.next().charAt(0);
-            System.out.print("Mes de Nascimento: ");
-            int mesNascimento = sc.nextInt();
+            vetorAlunos[i].sexo = sc.next().charAt(0);
+
+            System.out.print("Mês de Nascimento: ");
+            vetorAlunos[i].mesNascimento = sc.nextInt();
+
             System.out.print("Ano de Nascimento: ");
-            int anoNascimento = sc.nextInt();
-
-            Aluno[] aluno = new Aluno[5];
+            vetorAlunos[i].anoNascimento = sc.nextInt();
         }
-
-
-
 
         sc.close();
     }
 }
+
