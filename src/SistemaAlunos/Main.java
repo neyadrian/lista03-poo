@@ -21,7 +21,8 @@ public class Main {
 
         for (int i = 0; i < vetorAlunos.length; i++) {
 
-            System.out.println("\n-- DIGITE OS DADOS DO ALUNO " + (i + 1) + " --");
+            System.out.println("------------------------------------------------");
+            System.out.println("-- DIGITE OS DADOS DO ALUNO " + (i + 1) + " --");
 
             System.out.print("Matrícula: ");
             int matricula = sc.nextInt();
@@ -39,8 +40,13 @@ public class Main {
             System.out.print("Ano de Nascimento: ");
             int ano = sc.nextInt();
 
-            vetorAlunos[i] = new Aluno(matricula, nome, sexo, mes, ano);
+            System.out.print("Status (1-Ativo/2-Inativo): ");
+            int status = sc.nextInt();
 
+            vetorAlunos[i] = new Aluno(matricula, nome, sexo, mes, ano, status);
+
+            System.out.println("------------------------------------------------");
+            System.out.println("-- DIGITE AS NOTAS DO ALUNO " + (i + 1) + " --");
             System.out.print("Nota 01: ");
             vetorAlunos[i].nota1 = sc.nextDouble();
             System.out.print("Nota 02: ");
@@ -49,7 +55,10 @@ public class Main {
             vetorAlunos[i].nota3 = sc.nextDouble();
             System.out.print("Nota 04: ");
             vetorAlunos[i].nota4 = sc.nextDouble();
+
         }
+
+
 
         sc.close();
     }
