@@ -18,6 +18,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Aluno[] vetorAlunos = new Aluno[5];
+        int status, quantAtivos = 0, quantInativos = 0;
 
         for (int i = 0; i < vetorAlunos.length; i++) {
 
@@ -41,9 +42,9 @@ public class Main {
             int ano = sc.nextInt();
 
             System.out.print("Status (1-Ativo/2-Inativo): ");
-            int status = sc.nextInt();
+            status = sc.nextInt();
 
-            vetorAlunos[i] = new Aluno(matricula, nome, sexo, mes, ano, status);
+            vetorAlunos[i] = new Aluno(matricula, nome, sexo, mes, ano);
 
             System.out.println("------------------------------------------------");
             System.out.println("-- DIGITE AS NOTAS DO ALUNO " + (i + 1) + " --");
@@ -56,9 +57,12 @@ public class Main {
             System.out.print("Nota 04: ");
             vetorAlunos[i].nota4 = sc.nextDouble();
 
+            if (status == 1) {
+                quantAtivos = quantAtivostivos + 1;
+            } else {
+                quantInativos = quantInativos + 1;
+            }
         }
-
-
 
         sc.close();
     }
