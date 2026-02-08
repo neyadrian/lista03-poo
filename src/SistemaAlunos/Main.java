@@ -3,14 +3,6 @@ package SistemaAlunos;
 import java.util.Locale;
 import java.util.Scanner;
 
-//Crie um sistema capaz de cadastrar 5 alunos com os seguintes dados:
-//matricula, nome, sexo, ano de nascimento, mês de nascimento, status
-//        (ativo ou inativo), nota01, nota02, nota03 e nota04. No final
-//o sistema deve ser capaz de informar quantos alunos estão ativos e
-//quantos estão inativos, bem como quantos passaram por média e
-//quantos reprovaram. Imprima os dados dos alunos, calcule a idade, mostre
-//a média de cada um. Faça algo completo.
-
 public class Main {
     public static void main(String[] args) {
 
