@@ -20,19 +20,21 @@ public class Main {
         String vetorAlunos[] = new String[5];
 
         for (int i = 0; i < vetorAlunos.length; i++) {
-            Aluno[] aluno = new Aluno[5];
+
 
             System.out.println("-- DIGITE OS DADOS DO ALUNO " + i + 1 + " --");
             System.out.print("Matrícula: ");
-            aluno[i].matricula = sc.nextInt();
+            int matricula = sc.nextInt();
             System.out.print("Nome: ");
-            aluno[i].nome = sc.nextLine();
+            String nome = sc.nextLine();
             System.out.print("Sexo (M/F): ");
-            aluno[i].sexo = sc.next().charAt(0);
+            char sexo = sc.next().charAt(0);
             System.out.print("Mes de Nascimento: ");
-            aluno[i].mesNascimento = sc.nextInt();
+            int mesNascimento = sc.nextInt();
             System.out.print("Ano de Nascimento: ");
-            aluno[i].anoNascimento = sc.nextInt();
+            int anoNascimento = sc.nextInt();
+
+            Aluno[] aluno = new Aluno[5];
         }
 
 
