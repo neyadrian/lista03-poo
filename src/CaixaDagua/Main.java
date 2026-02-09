@@ -1,17 +1,12 @@
 package CaixaDagua;
 
+import java.util.Locale;
 import java.util.Scanner;
-
-/*
-Crie uma classe que calcule quantos metros cúbicos de água suporta
-uma determinada caixa-d’água em forma de cubo (todos os lados são iguais).
-O usuário deverá informar o valor do lado e o volume será calculado pela
-fórmula: Volume = lado³. Arredonde o resultado para o seu inteiro anterior.
-*/
 
 public class Main {
     public static void main(String[] args) {
 
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         double lado;
